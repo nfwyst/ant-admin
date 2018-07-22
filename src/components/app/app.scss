@@ -1,0 +1,50 @@
+.app {
+  text-align: center;
+}
+
+@mixin pink {
+  color: pink;
+}
+
+.logo {
+  animation: spin infinite 2s linear;
+  height: 80px;
+}
+
+.header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+
+  h1 {
+    @include pink;
+  }
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.intro {
+  font-size: large;
+}
+
+@keyframes spin {
+  from{
+		transform: translate(50%, 150px)
+		rotate(0turn)
+		translate(-50%, -150px)
+		translate(50%,50%)
+		rotate(1turn)
+		translate(-50%,-50%)
+	}
+	to{
+		transform: translate(50%, 150px)
+		rotate(1turn)
+		translate(-50%, -150px)
+		translate(50%,50%)
+		rotate(0turn)
+		translate(-50%,-50%)
+	}
+}
