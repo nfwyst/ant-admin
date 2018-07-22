@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './index.scss';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Switch } from 'react-router-dom';
 
 // component
-import App from "./components/app/";
 import Introduce from './components/introduce/';
 import Table from './components/table/';
 import Form from './components/form/';
@@ -20,6 +18,9 @@ ReactDOM.render(
     <Switch>
       <BasicLayout exact path="/" component={Introduce}/>
       <BasicLayout exact path="/table" component={Table} />
+      <BasicLayout exact path="/form" component={Form} />
+      <BasicLayout exact path="/progress" component={Progress} />
+      <BasicLayout exact path="/carousel" component={Carousel} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
